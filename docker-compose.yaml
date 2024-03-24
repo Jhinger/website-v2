@@ -1,0 +1,19 @@
+
+services:
+  app:
+    container_name: website-v2
+    build:
+      context: .
+      target: dev
+    restart: always
+    command: npm run dev
+    environment:
+      NODE_ENV: development
+    env_file:
+      - .env
+    volumes:
+      - .:/src
+      - /src/node_modules
+      - /src/.next
+    ports:
+      - 3000:3000
