@@ -1,7 +1,9 @@
+import Header from "@/components/Header";
+
 export default function Home() {
 	return (
-		<div className="w-100 h-100 bg-red-500">
-			<h1>Hello World</h1>
+		<div className="flex justify-center items-center mt-40">
+			<Header />
 		</div>
 	);
 }

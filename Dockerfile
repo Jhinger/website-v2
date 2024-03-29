@@ -3,8 +3,8 @@ ARG NODE_VERSION=18.17.1
 FROM node:${NODE_VERSION}-alpine AS base
 
 FROM base AS deps
-RUN apk add --no-cache 
 WORKDIR /src
+RUN apk add --no-cache 
 COPY package.json package-lock.json ./
 RUN npm ci
 
