@@ -24,7 +24,49 @@
 	}
 }
 
+:root {
+	--color-background: 255 255 255;
+	--color-contrast: 0 0 0;
+	--color-text: 63 63 63;
+	--color-primary: 17 226 255;
+	--color-button: 192 192 192;
+	--color-button-icon: 250 250 250;
+	--color-button-text: 250 250 250;
+	--color-group: 240 240 240;
+	--color-linkedin: 0 119 181;
+	--color-github: 45 186 78;
+	--color-darkmode: 132 42 250;
+	--color-theme-opposite: 132 42 250;
+	--color-contact: 252 107 3;
+}
+
+:root[class~="dark"] {
+	--color-background: 35 35 35;
+	--color-contrast: 255 255 255;
+	--color-text: 211 211 211;
+	--color-primary: 17 226 255;
+	--color-button: 52 52 52;
+	--color-button-icon: 199 199 199;
+	--color-button-text: 199 199 199;
+	--color-group: 27 27 27;
+	--color-linkedin: 0 119 181;
+	--color-github: 45 186 78;
+	--color-theme-opposite: 24 150 241;
+	--color-darkmode: 132 42 250;
+	--color-contact: 252 107 3;
+}
+
+p > a {
+	color: rgb(var(--color-primary) / 1);
+}
+
+p > a:hover {
+	color: rgb(var(--color-contrast) / 1);
+	transition: 100ms ease-in-out;
+}
+
 body {
+	background-color: rgb(var(--color-background) / 1);
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;

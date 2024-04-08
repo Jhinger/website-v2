@@ -4,7 +4,7 @@ type LogoProps = {
 	className?: string;
 };
 
-const Logo = ({ className }: LogoProps) => {
+const Logo = async ({ className }: LogoProps) => {
 	return (
 		<svg
 			className={cn("", className)}

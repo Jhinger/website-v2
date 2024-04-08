@@ -1,22 +1,21 @@
+import NavItem from "@/components/NavItem";
 import Logo from "@/assets/Logo";
+import { data } from "@/data";
 
-const Header = () => {
+const Header = async () => {
 	return (
-		<div className="flex flex-row items-center justify-between max-w-[50rem] w-full">
+		<div className="flex flex-col gap-8 sm:flex-row max-w-[50rem] items-start sm:items-center justify-between w-full">
 			<div className="flex flex-row gap-4 items-center justify-center">
 				<Logo className="w-8 h-8" />
-				<div className="flex flex-col">
-					<h1 className="font-bold text-lg">Gurshan Jhinger</h1>
-					<h5 className="text-gray-400 text-xs">Software Developer</h5>
+				<div className="flex flex-col gap-1.5">
+					<h1 className="font-bold text-lg leading-none">{data.name}</h1>
+					<h5 className="text-gray-400 text-xs leading-none">{data.role}</h5>
 				</div>
 			</div>
 			<div className="flex flex-row text-sm font-medium gap-8">
-				<span className="hover:text-primary hover:cursor-pointer duration-150 underline-animation">
-					work
-				</span>
-				<span className="hover:text-primary hover:cursor-pointer duration-150 underline-animation ease-in-out">
-					resume
-				</span>
+				{data.nav.map(({ name, link }) => (
+					<NavItem key={name} name={name} link={link} />
+				))}
 			</div>
 		</div>
 	);

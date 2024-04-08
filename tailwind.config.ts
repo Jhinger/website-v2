@@ -10,8 +10,21 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontSize: {
+        xxs: "0.5rem"
+      },
       colors: {
-        primary: "#11E2FF"
+        primary: "rgb(var(--color-primary) / <alpha-value>)",
+        button: "rgb(var(--color-button) / <alpha-value>)",
+        buttonIcon: "rgb(var(--color-button-icon) / <alpha-value>)",
+        buttonText: "rgb(var(--color-button-text) / <alpha-value>)",
+        text: "rgb(var(--color-text) / <alpha-value>)",
+        group: "rgb(var(--color-group) / <alpha-value>)",
+        linkedin: "rgb(var(--color-linkedin) / <alpha-value>)",
+        github: "rgb(var(--color-github) / <alpha-value>)",
+        contact: "rgb(var(--color-contact) / <alpha-value>)",
+        darkmode: "rgb(var(--color-darkmode) / <alpha-value>)",
+        themeOpposite: "rgb(var(--color-theme-opposite) / <alpha-value>)",
       }
     },
   },
