@@ -5,40 +5,41 @@ type ControlButtonProps = {
 	children: React.ReactNode;
 	href?: string;
 	className?: string;
+	[key: string]: any;
 };
 
-const ControlButton = ({ children, href, className }: ControlButtonProps) => {
+const ControlButton = ({
+	children,
+	href,
+	className,
+	...props
+}: ControlButtonProps) => {
 	return (
 		<>
-			{href 
-				? (
-					<Link
-						href={href ?? ""}
-						target="_blank"
-						rel="noopener noreferrer"
-						className={cn(
-							"relative w-max flex justify-center items-center p-4 bg-button rounded-2xl",
-							className
-						)}>
-						{children}
-					</Link>
-				)
-				: (
-					<button
-						className={cn(
-							"relative w-max flex justify-center items-center p-4 bg-button rounded-2xl",
-							className
-						)}>
-						{children}
-					</button>
-				)
-			}
+			{href ? (
+				<Link
+					{...props}
+					href={href ?? ""}
+					target="_blank"
+					rel="noopener noreferrer"
+					className={cn(
+						"relative w-max flex justify-center items-center p-4 bg-button rounded-2xl",
+						className
+					)}>
+					{children}
+				</Link>
+			) : (
+				<button
+					{...props}
+					className={cn(
+						"relative w-max flex justify-center items-center p-4 bg-button rounded-2xl",
+						className
+					)}>
+					{children}
+				</button>
+			)}
 		</>
-	)
+	);
 };
 
 export default ControlButton;
-
-
-
-

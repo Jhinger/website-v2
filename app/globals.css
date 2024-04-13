@@ -32,12 +32,15 @@
 	--color-button: 192 192 192;
 	--color-button-icon: 250 250 250;
 	--color-button-text: 250 250 250;
+	--color-button-text-hover: 250 250 250;
+	--color-bold-text: 0 0 0;
 	--color-group: 240 240 240;
 	--color-linkedin: 0 119 181;
 	--color-github: 45 186 78;
 	--color-darkmode: 132 42 250;
 	--color-theme-opposite: 132 42 250;
 	--color-contact: 252 107 3;
+	--color-transparent-black: 0 0 0 / 0.5;
 }
 
 :root[class~="dark"] {
@@ -48,21 +51,19 @@
 	--color-button: 52 52 52;
 	--color-button-icon: 199 199 199;
 	--color-button-text: 199 199 199;
+	--color-button-text-hover: 0 0 0;
+	--color-bold-text: 250 250 250;
 	--color-group: 27 27 27;
 	--color-linkedin: 0 119 181;
 	--color-github: 45 186 78;
 	--color-theme-opposite: 24 150 241;
 	--color-darkmode: 132 42 250;
 	--color-contact: 252 107 3;
+	--color-transparent-black: 0 0 0 / 0.5;
 }
 
-p > a {
-	color: rgb(var(--color-primary) / 1);
-}
-
-p > a:hover {
-	color: rgb(var(--color-contrast) / 1);
-	transition: 100ms ease-in-out;
+b {
+	color: rgb(var(--color-bold-text) / 1);
 }
 
 body {

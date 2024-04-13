@@ -9,7 +9,7 @@ const Header = async () => {
 				<Logo className="w-8 h-8" />
 				<div className="flex flex-col gap-1.5">
 					<h1 className="font-bold text-lg leading-none">{data.name}</h1>
-					<h5 className="text-gray-400 text-xs leading-none">{data.role}</h5>
+					<h2 className="text-gray-400 text-xs leading-none">{data.role}</h2>
 				</div>
 			</div>
 			<div className="flex flex-row text-sm font-medium gap-8">

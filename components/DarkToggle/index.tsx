@@ -10,17 +10,18 @@ const DarkToggle = () => {
 	const [mounted, setMounted] = useState(false);
 	const { theme, setTheme } = useTheme();
 
-	useEffect(() => setMounted(true), []);
+	useEffect(() => {
+		setMounted(true);
+	}, []);
 
 	if (!mounted) return null;
-
-	console.log(theme);
 
 	return (
 		<div
 			className="w-max"
 			onClick={() => (theme === "dark" ? setTheme("light") : setTheme("dark"))}>
 			<ControlButton
+				aria-label="Dark Mode Toggle"
 				className={cn(
 					theme === "dark" ? "bg-darkmode" : "bg-button",
 					"hover:bg-themeOpposite duration-300 text-buttonIcon"

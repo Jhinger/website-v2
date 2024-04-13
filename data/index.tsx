@@ -87,4 +87,12 @@ export const data = {
 			image: "",
 		},
 	],
+	spotify: {
+		url: "",
+		color: "",
+		image: "",
+		name: "",
+		artist: "",
+		played_at: "",
+	},
 } as const;

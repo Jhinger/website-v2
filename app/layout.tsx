@@ -27,8 +27,17 @@ export default function RootLayout({
 declare global {
 	namespace NodeJS {
 		interface ProcessEnv {
+			BASE_URL: string;
 			SPOTIFY_CLIENT_ID: string;
 			SPOTIFY_CLIENT_SECRET: string;
+			SPOTIFY_TOKEN_ENDPOINT: string;
+			SPOTIFY_AUTHORIZE_ENDPOINT: string;
+			SPOTIFY_RECENTLY_PLAYED_ENDPOINT: string;
+			SPOTIFY_REDIRECT_URI: string;
+			KV_URL: string;
+			KV_REST_API_URL: string;
+			KV_REST_API_TOKEN: string;
+			KV_REST_API_READ_ONLY_TOKEN: string;
 		}
 	}
 }
