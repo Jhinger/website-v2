@@ -88,11 +88,11 @@ export const data = {
 		},
 	],
 	spotify: {
-		url: "",
+		url: "https://open.spotify.com/track/2bxVJeXMKGHijMD563Oqcr",
 		color: "",
-		image: "",
-		name: "",
-		artist: "",
-		played_at: "",
+		image: "https://i.scdn.co/image/ab67616d0000b27318ac09794de70aed7c226172",
+		name: "Never Be Alone",
+		artist: "Alexa Harley",
+		played_at: "2024-04-13T07:49:58.957Z",
 	},
 } as const;

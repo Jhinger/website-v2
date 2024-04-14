@@ -47,7 +47,7 @@ async function refreshTokens(): Promise<string | Error> {
     if (response.ok) {
       const body = await response.json();
 
-      await kv.set("spotify_access_token", body.access_token);
+      await kv.set("spotify_access_token", body.access_token, { ex: body.expires_in });
       body.refresh_token
         ? await kv.set("spotify_refresh_token", body.refresh_token)
         : null
@@ -92,7 +92,7 @@ async function getRecentlyPlayed(access_token: string | null | Error): Promise<R
 }
 
 export default async function fetchSpotifyData(): Promise<RelevantSpotifyData> {
-  // if (isDevelopment()) return data.spotify;
+  if (isDevelopment()) return data.spotify;
 
   const access_token = await getSpotifyAccessToken() || await refreshTokens();
 
