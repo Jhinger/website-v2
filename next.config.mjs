@@ -6,6 +6,11 @@ const nextConfig = {
         fullUrl: true
     }
   },
+  images: {
+    domains: [
+      "i.scdn.co",
+    ]
+  }
 };
 
 export default nextConfig;

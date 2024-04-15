@@ -14,12 +14,11 @@ type ControlCenterProps = {
 
 const ControlCenter = async ({ className }: ControlCenterProps) => {
 	const spotifyData = await fetchSpotifyData();
-	console.log(spotifyData);
 
 	return (
 		<div
 			className={cn(
-				"w-full mt-24 flex flex-row gap-4 justify-center items-center",
+				"w-full mt-24 flex flex-row flex-wrap gap-4 justify-center items-center",
 				className
 			)}>
 			<ControlGroup className="grid grid-cols-2 gap-3 justify-center items-center">
@@ -44,11 +43,14 @@ const ControlCenter = async ({ className }: ControlCenterProps) => {
 				<DarkToggle />
 			</ControlGroup>
 
+			<AudioPlayer {...spotifyData} />
+
 			<ControlGroup className="relative aspect-square w-[10rem] p-0 hover:cursor-pointer">
 				<Image
 					src="/map.png"
 					className="rounded-xl"
-					fill={true}
+					width={1870}
+					height={1870}
 					alt="Map of Vancouver"
 					quality={100}
 					priority={true}
@@ -61,10 +63,6 @@ const ControlCenter = async ({ className }: ControlCenterProps) => {
 					</h2>
 				</div>
 			</ControlGroup>
-
-			{/* <AudioPlayer>
-
-			</AudioPlayer> */}
 
 			<ControlGroup className="grid grid-cols-2 grid-rows-2 justify-center items-center">
 				<ControlButton

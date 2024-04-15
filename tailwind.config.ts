@@ -28,9 +28,25 @@ const config: Config = {
         contact: "rgb(var(--color-contact) / <alpha-value>)",
         darkmode: "rgb(var(--color-darkmode) / <alpha-value>)",
         themeOpposite: "rgb(var(--color-theme-opposite) / <alpha-value>)",
-        transparentBlack: "rgb(var(--color-transparent-black) / <alpha-value>)",
-      }
+        transparentBlack: "rgb(var(--color-transparent-black) / 0.5)",
+      },
     },
+    animation: {
+      crazyColors: "crazyColors 3s ease-in-out infinite",
+    },
+    keyframes: {
+      crazyColors: {
+        '0%': {
+          "border-color": "#11E2FF"
+        },
+        "50%": {
+          "border-color": "#6C11FF"
+        },
+        "100%": {
+          "border-color": "#11E2FF"
+        },
+      }
+    }
   },
   plugins: [],
 };

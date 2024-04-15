@@ -4,7 +4,7 @@ import { kv } from "@vercel/kv";
 import { data } from "@/data";
 import type { ObjectFromUnion } from "@/types";
 
-type RelevantSpotifyData = ObjectFromUnion<keyof typeof data.spotify>;
+export type RelevantSpotifyData = ObjectFromUnion<keyof typeof data.spotify>;
 
 async function getSpotifyAccessToken(): Promise<string | null> {
   noStore(); 
@@ -19,6 +19,7 @@ async function getSpotifyRefreshToken(): Promise<string | null> {
 function parseSpotifyResponse(res: SpotifyApi.UsersRecentlyPlayedTracksResponse): RelevantSpotifyData {
   return {
 		url: res.items[0].track.external_urls.spotify, 
+    preview_url: res.items[0].track.preview_url ?? "",
 		color: "",
 		image: res.items[0].track.album.images[0].url,
 		name: res.items[0].track.name,
@@ -92,7 +93,7 @@ async function getRecentlyPlayed(access_token: string | null | Error): Promise<R
 }
 
 export default async function fetchSpotifyData(): Promise<RelevantSpotifyData> {
-  if (isDevelopment()) return data.spotify;
+  // if (isDevelopment()) return data.spotify;
 
   const access_token = await getSpotifyAccessToken() || await refreshTokens();
 

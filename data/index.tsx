@@ -89,6 +89,8 @@ export const data = {
 	],
 	spotify: {
 		url: "https://open.spotify.com/track/2bxVJeXMKGHijMD563Oqcr",
+		preview_url:
+			"https://p.scdn.co/mp3-preview/4c2da5521f47a35730b3592bcf26a3c2c49861f6?cid=cfe923b2d660439caf2b557b21f31221",
 		color: "",
 		image: "https://i.scdn.co/image/ab67616d0000b27318ac09794de70aed7c226172",
 		name: "Never Be Alone",

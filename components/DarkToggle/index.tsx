@@ -21,7 +21,7 @@ const DarkToggle = () => {
 			className="w-max"
 			onClick={() => (theme === "dark" ? setTheme("light") : setTheme("dark"))}>
 			<ControlButton
-				aria-label="Dark Mode Toggle"
+				aria-label="Theme Toggle"
 				className={cn(
 					theme === "dark" ? "bg-darkmode" : "bg-button",
 					"hover:bg-themeOpposite duration-300 text-buttonIcon"

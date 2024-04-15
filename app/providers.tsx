@@ -8,7 +8,7 @@ export default function Providers({ children }: { children: React.ReactNode }) {
 			attribute="class"
 			enableSystem={false}
 			storageKey="theme"
-			defaultTheme="light"
+			defaultTheme="dark"
 			themes={["light", "dark"]}>
 			{children}
 		</ThemeProvider>
