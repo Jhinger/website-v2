@@ -93,7 +93,7 @@ async function getRecentlyPlayed(access_token: string | null | Error): Promise<R
 }
 
 export default async function fetchSpotifyData(): Promise<RelevantSpotifyData> {
-  // if (isDevelopment()) return data.spotify;
+  if (isDevelopment()) return data.spotify;
 
   const access_token = await getSpotifyAccessToken() || await refreshTokens();
 
