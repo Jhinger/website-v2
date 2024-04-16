@@ -32,7 +32,7 @@ const config: Config = {
       },
     },
     animation: {
-      crazyColors: "crazyColors 3s ease-in-out infinite",
+      crazyColors: "crazyColors 4s ease-in-out infinite",
     },
     keyframes: {
       crazyColors: {

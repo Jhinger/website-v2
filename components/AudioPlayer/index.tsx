@@ -15,7 +15,6 @@ type AudioPlayerProps = RelevantSpotifyData & {
 
 const AudioPlayer = ({
 	url,
-	color,
 	image,
 	name,
 	artist,
@@ -66,7 +65,7 @@ const AudioPlayer = ({
 					<div className="flex flex-col gap-1 items-start">
 						<span className="font-semibold">Last Listened to</span>
 						<span className="font-light">
-							{hrs > 0 ? `${hrs} hours ago` : `${min} minute(s) ago`}
+							{hrs > 0 ? `${hrs} hour(s) ago` : `${min} minute(s) ago`}
 						</span>
 					</div>
 					<div className="flex flex-col gap-1 items-start">

@@ -10,11 +10,11 @@ export const data = {
 	nav: [
 		{
 			name: "work",
-			link: "#",
+			link: "",
 		},
 		{
 			name: "resume",
-			link: "#",
+			link: `${process.env.BASE_URL}/resume.pdf`,
 		},
 	],
 	introduction: [
@@ -91,7 +91,6 @@ export const data = {
 		url: "https://open.spotify.com/track/6dquCx5KAW5jCgGgoTlghL",
 		preview_url:
 			"https://p.scdn.co/mp3-preview/d0d405e0518ba690d30cb1870b4bacb4997c6536?cid=ff73a8a24f874120886561652c2ad2cc",
-		color: "",
 		image: "https://i.scdn.co/image/ab67616d0000b273fc03b97c30ce11e30e65e389",
 		name: "Every Second",
 		artist: "Mina Okabe",

@@ -20,7 +20,6 @@ function parseSpotifyResponse(res: SpotifyApi.UsersRecentlyPlayedTracksResponse)
   return {
 		url: res.items[0].track.external_urls.spotify, 
     preview_url: res.items[0].track.preview_url ?? "",
-		color: "",
 		image: res.items[0].track.album.images[0].url,
 		name: res.items[0].track.name,
 		artist: res.items[0].track.artists[0].name,
@@ -93,7 +92,7 @@ async function getRecentlyPlayed(access_token: string | null | Error): Promise<R
 }
 
 export default async function fetchSpotifyData(): Promise<RelevantSpotifyData> {
-  if (isDevelopment()) return data.spotify;
+  // if (isDevelopment()) return data.spotify;
 
   const access_token = await getSpotifyAccessToken() || await refreshTokens();
 

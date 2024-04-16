@@ -18,7 +18,7 @@ const ControlCenter = async ({ className }: ControlCenterProps) => {
 	return (
 		<div
 			className={cn(
-				"w-full mt-24 flex flex-row flex-wrap gap-4 justify-center items-center",
+				"w-full flex flex-row mt-16 mb-40 flex-wrap gap-4 justify-center items-center",
 				className
 			)}>
 			<ControlGroup className="grid grid-cols-2 gap-3 justify-center items-center">
