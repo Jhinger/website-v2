@@ -30,7 +30,7 @@ const Experience = ({ className }: ExperienceProps) => {
 							quality={100}
 							priority={true}
 						/>
-						<div className="absolute left-0 top-0 w-full h-full bg-gradient-to-r from-primary/70 via-primary/50"></div>
+						<div className="absolute left-0 top-0 w-full h-full bg-gradient-to-r from-primary/70 via-primary/50 opacity-0 hover:opacity-100 transition-opacity ease-in-out duration-200"></div>
 					</Link>
 				</ControlGroup>
 			))}

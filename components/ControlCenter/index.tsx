@@ -45,7 +45,7 @@ const ControlCenter = async ({ className }: ControlCenterProps) => {
 
 			<AudioPlayer {...spotifyData} />
 
-			<ControlGroup className="relative aspect-square w-[10rem] p-0 hover:cursor-pointer">
+			<ControlGroup className="relative aspect-square w-[10rem] p-0 hover:cursor-pointer overflow-hidden">
 				<Image
 					src="/map.png"
 					className="rounded-xl"
@@ -56,7 +56,7 @@ const ControlCenter = async ({ className }: ControlCenterProps) => {
 					priority={true}
 				/>
 				<span className="w-2 h-2 rounded-full absolute left-1/2 top-1/2 bg-primary ring-1 ring-white"></span>
-				<div className="w-full h-3/4 flex flex-col justify-end items-start absolute bottom-0 left-0 rounded-b-xl p-4 bg-gradient-to-t from-black">
+				<div className="w-full h-full flex flex-col justify-end items-start absolute bottom-0 left-0 p-4 bg-gradient-to-t from-black">
 					<h1 className="font-bold text-xxsPlus text-white">Based in</h1>
 					<h2 className="font-light text-xxsPlus text-white">
 						Vancouver, B.C.
