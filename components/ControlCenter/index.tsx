@@ -34,7 +34,7 @@ const ControlCenter = async ({ className }: ControlCenterProps) => {
 				</ControlButton>
 
 				<ControlButton
-					href="#"
+					href={`mailto:${data.email}`}
 					className="hover:bg-contact duration-300"
 					aria-label="Contact">
 					<ContactIcon className="w-6 h-6 fill-buttonIcon" />
