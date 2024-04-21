@@ -20,16 +20,17 @@ const Experience = ({ className }: ExperienceProps) => {
 				<ControlGroup
 					className="w-[20rem] md:w-[23rem] lg:w-[25rem] h-[12rem] relative overflow-hidden cursor-pointer first:ring-2 first:ring-primary first:ring-offset-2 ring-offset-colorBackground"
 					key={experience.name}>
+					<Image
+						src={experience.image}
+						fill={true}
+						sizes={experience.sizes}
+						className="relative"
+						style={{ objectFit: "cover" }}
+						alt={experience.name}
+						quality={100}
+						priority={false}
+					/>
 					<Link href={experience.url} target="__blank">
-						<Image
-							src={experience.image}
-							className="relative"
-							fill={true}
-							style={{ objectFit: "cover" }}
-							alt={experience.name}
-							quality={100}
-							priority={false}
-						/>
 						<div
 							className={cn(
 								"absolute left-0 top-0 w-full h-full bg-gradient-to-r opacity-100 md:opacity-0 hover:opacity-100 transition-opacity ease-in-out duration-200 from-black via-black/70"
