@@ -28,7 +28,7 @@ const Experience = ({ className }: ExperienceProps) => {
 						style={{ objectFit: "cover" }}
 						alt={experience.name}
 						quality={100}
-						priority={false}
+						priority={true}
 					/>
 					<Link href={experience.url} target="__blank">
 						<div
