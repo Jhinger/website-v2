@@ -65,6 +65,7 @@ export const data = {
 			logo: `${process.env.BASE_URL}/images/freshprep-logo.png`,
 			image: `${process.env.BASE_URL}/freshprep-bg.jpg`,
 			url: "https://www.freshprep.ca",
+			sizes: "",
 		},
 		{
 			name: "Fresh Prep",
@@ -73,6 +74,7 @@ export const data = {
 			logo: "",
 			image: `${process.env.BASE_URL}/freshprep-bg2.png`,
 			url: "https://www.freshprep.ca",
+			sizes: "",
 		},
 		{
 			name: "Later",
@@ -81,6 +83,7 @@ export const data = {
 			logo: "",
 			image: `${process.env.BASE_URL}/later-bg.png`,
 			url: "https://www.later.com",
+			sizes: "",
 		},
 		{
 			name: "PixlWorks Productions",
@@ -89,6 +92,7 @@ export const data = {
 			logo: "",
 			image: `${process.env.BASE_URL}/pixlworks-bg.jpg`,
 			url: "https://www.pixlworks.com",
+			sizes: "",
 		},
 	],
 	spotify: {

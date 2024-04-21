@@ -1,13 +1,31 @@
 import { Inter } from "next/font/google";
+import type { Metadata, Viewport } from "next";
 import Providers from "@/app/providers";
-import type { Metadata } from "next";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
 	title: "Gurshan Jhinger",
-	description: "Personal website of Gurshan Jhinger",
+	description:
+		"Gurshan Jhinger is a Software Developer passionate about developing clean, functional, and satisfying web experiences.",
+	robots: {
+		index: true,
+		follow: true,
+		nocache: false,
+		googleBot: {
+			index: true,
+			follow: true,
+			noimageindex: false,
+			"max-video-preview": -1,
+			"max-image-preview": "large",
+			"max-snippet": -1,
+		},
+	},
+};
+
+export const viewport: Viewport = {
+	themeColor: "primary",
 };
 
 export default function RootLayout({

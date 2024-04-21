@@ -29,6 +29,7 @@ const config: Config = {
         darkmode: "rgb(var(--color-darkmode) / <alpha-value>)",
         themeOpposite: "rgb(var(--color-theme-opposite) / <alpha-value>)",
         transparentBlack: "rgb(var(--color-transparent-black) / 0.5)",
+        colorBackground: "rgb(var(--color-background) / <alpha-value>)",
       },
     },
     animation: {

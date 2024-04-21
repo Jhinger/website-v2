@@ -6,8 +6,8 @@ import { cn } from "@/utils/cn";
 import { useRef, useState } from "react";
 import { PlayButton } from "@/assets";
 import { hoursAgo, minutesAgo } from "@/utils/time";
-import type { RelevantSpotifyData } from "@/spotify";
 import truncate from "@/utils/truncate";
+import type { RelevantSpotifyData } from "@/spotify";
 
 type AudioPlayerProps = RelevantSpotifyData & {
 	className?: string;
@@ -27,6 +27,14 @@ const AudioPlayer = ({
 
 	const hrs = hoursAgo(played_at);
 	const min = minutesAgo(played_at);
+
+	const timeSince = () => {
+		if (hrs > 0) {
+			return hrs === 1 ? `${hrs} hour ago` : `${hrs} hours ago`;
+		} else {
+			return min === 1 ? `${min} minute ago` : `${min} minutes ago`;
+		}
+	};
 
 	const handleMusicPlaying = () => {
 		if (isPlaying) {
@@ -64,9 +72,7 @@ const AudioPlayer = ({
 				<div className="p-6 absolute w-1/2 h-full flex flex-col justify-between items-start left-0 top-0 right-0 text-xxsPlus text-gray-300">
 					<div className="flex flex-col gap-1 items-start">
 						<span className="font-semibold">Last Listened to</span>
-						<span className="font-light">
-							{hrs > 0 ? `${hrs} hour(s) ago` : `${min} minute(s) ago`}
-						</span>
+						<span className="font-light">{timeSince()}</span>
 					</div>
 					<div className="flex flex-col gap-1 items-start">
 						<span className="font-semibold">{truncate(name, 19)}</span>
