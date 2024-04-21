@@ -18,12 +18,12 @@ async function getSpotifyRefreshToken(): Promise<string | null> {
 
 function parseSpotifyResponse(res: SpotifyApi.UsersRecentlyPlayedTracksResponse): RelevantSpotifyData {
   return {
-		url: res.items[0].track.external_urls.spotify, 
+    url: res.items[0].track.external_urls.spotify, 
     preview_url: res.items[0].track.preview_url ?? "",
-		image: res.items[0].track.album.images[0].url,
-		name: res.items[0].track.name,
-		artist: res.items[0].track.artists[0].name,
-		played_at: res.items[0].played_at,
+    image: res.items[0].track.album.images[0].url,
+    name: res.items[0].track.name,
+    artist: res.items[0].track.artists[0].name,
+    played_at: res.items[0].played_at,
   }
 }
 
