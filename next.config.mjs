@@ -10,7 +10,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "www.jhinger.com", // if your website has no www, drop it
+        hostname: "www.jhinger.com",
       },
       {
         protocol: "http",
@@ -20,7 +20,8 @@ const nextConfig = {
         protocol: "https",
         hostname: "i.scdn.co",
       },
-    ]
+    ],
+    minimumCacheTTL: 3600
   }
 };
 

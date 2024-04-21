@@ -1,9 +1,9 @@
-import { isDevelopment, isProduction } from "@/utils/environment";
+import { isDevelopment } from "@/utils/environment";
 import { NextRequest, NextResponse } from "next/server";
 import { kv } from "@vercel/kv";
 
 export async function GET(request: NextRequest) {
-  if (isDevelopment() || isProduction()) return NextResponse.redirect(process.env.BASE_URL);
+  if (!isDevelopment()) return NextResponse.redirect(process.env.BASE_URL);
 
   const code = request.nextUrl.searchParams.get("code") ?? null;
   const error = request.nextUrl.searchParams.get("error") ?? null;

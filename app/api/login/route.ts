@@ -1,8 +1,8 @@
-import { isDevelopment, isProduction } from "@/utils/environment";
+import { isDevelopment } from "@/utils/environment";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(request: NextRequest) { 
-  if (isDevelopment() || isProduction()) return NextResponse.redirect(process.env.BASE_URL);
+  if (!isDevelopment()) return NextResponse.redirect(process.env.BASE_URL);
 
   const redirectURL = new URL(process.env.SPOTIFY_AUTHORIZE_ENDPOINT);
   redirectURL.searchParams.set("client_id", process.env.SPOTIFY_CLIENT_ID);
