@@ -1,9 +1,10 @@
 import { isDevelopment } from "@/utils/environment";
 import { NextRequest, NextResponse } from "next/server";
 import { kv } from "@vercel/kv";
+import { RedirectType, redirect } from "next/navigation";
 
 export async function GET(request: NextRequest) {
-  if (!isDevelopment()) return NextResponse.redirect(process.env.BASE_URL);
+  if (!isDevelopment()) return redirect(process.env.BASE_URL, RedirectType.push);
 
   const code = request.nextUrl.searchParams.get("code") ?? null;
   const error = request.nextUrl.searchParams.get("error") ?? null;
