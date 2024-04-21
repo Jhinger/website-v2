@@ -1,4 +1,4 @@
-import { isDevelopment } from "@/utils/environment";
+import { isProduction } from "@/utils/environment";
 import { unstable_noStore as noStore } from "next/cache";
 import { kv } from "@vercel/kv";
 import { data } from "@/data";
@@ -77,7 +77,7 @@ async function getRecentlyPlayed(access_token: string | null | Error): Promise<R
         'Authorization': `Bearer ${access_token}`
       },
       next: {
-        revalidate: 180
+        revalidate: 300
       }
     })
 
@@ -92,7 +92,7 @@ async function getRecentlyPlayed(access_token: string | null | Error): Promise<R
 }
 
 export default async function fetchSpotifyData(): Promise<RelevantSpotifyData> {
-  // if (isDevelopment()) return data.spotify;
+  if (!isProduction()) return data.spotify;
 
   const access_token = await getSpotifyAccessToken() || await refreshTokens();
 
