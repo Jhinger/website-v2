@@ -12,5 +12,5 @@
 </p>
 
 <p align="center">
-  <img src="/public/preview.svg" alt="Website Preview" />
+  <img src="/public/preview.png" alt="Website Preview" />
 </p>
