@@ -75,7 +75,7 @@ const AudioPlayer = ({
 						<span className="font-light">{timeSince()}</span>
 					</div>
 					<div className="flex flex-col gap-1 items-start">
-						<span className="font-semibold">{truncate(name, 19)}</span>
+						<span className="font-semibold">{truncate(name, 16)}</span>
 						<span className="font-light">{artist}</span>
 					</div>
 				</div>
