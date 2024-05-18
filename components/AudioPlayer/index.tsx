@@ -76,7 +76,7 @@ const AudioPlayer = ({
 					</div>
 					<div className="flex flex-col gap-1 items-start">
 						<span className="font-semibold">{truncate(name, 16)}</span>
-						<span className="font-light">{artist}</span>
+						<span className="font-light">{truncate(artist, 16)}</span>
 					</div>
 				</div>
 				{!isPlaying && <PlayButton className="w-4 h-4 z-100" />}
