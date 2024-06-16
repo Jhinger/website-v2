@@ -29,6 +29,9 @@ const AudioPlayer = ({
 	const min = minutesAgo(played_at);
 
 	const timeSince = () => {
+		if (hrs >= 24) {
+			return `${Math.round(hrs / 24)} day(s) ago`;
+		}
 		if (hrs > 0) {
 			return hrs === 1 ? `${hrs} hour ago` : `${hrs} hours ago`;
 		} else {
@@ -69,14 +72,14 @@ const AudioPlayer = ({
 					</div>
 				</div>
 				<div className="absolute w-full h-full bg-gradient-to-r from-black via-black"></div>
-				<div className="p-6 absolute w-1/2 h-full flex flex-col justify-between items-start left-0 top-0 right-0 text-xxsPlus text-gray-300">
+				<div className="p-6 absolute w-2/3 h-full flex flex-col justify-between items-start left-0 top-0 right-0 text-xxsPlus text-gray-300">
 					<div className="flex flex-col gap-1 items-start">
 						<span className="font-semibold">Last Listened to</span>
 						<span className="font-light">{timeSince()}</span>
 					</div>
 					<div className="flex flex-col gap-1 items-start">
-						<span className="font-semibold">{truncate(name, 16)}</span>
-						<span className="font-light">{truncate(artist, 16)}</span>
+						<span className="font-semibold">{truncate(name, 20)}</span>
+						<span className="font-light">{truncate(artist, 20)}</span>
 					</div>
 				</div>
 				{!isPlaying && <PlayButton className="w-4 h-4 z-100" />}
