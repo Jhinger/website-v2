@@ -4,7 +4,7 @@ import { data } from "@/data";
 
 const Header = async () => {
 	return (
-		<div className="flex flex-col gap-8 sm:flex-row max-w-[50rem] items-start sm:items-center justify-between w-full">
+		<div className="flex flex-col gap-8 sm:flex-row max-w-[50rem] items-start sm:items-center justify-between w-full px-12">
 			<div className="flex flex-row gap-4 items-center justify-center">
 				<Logo className="w-8 h-8" />
 				<div className="flex flex-col gap-1.5">

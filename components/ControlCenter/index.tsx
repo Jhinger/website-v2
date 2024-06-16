@@ -18,10 +18,10 @@ const ControlCenter = async ({ className }: ControlCenterProps) => {
 	return (
 		<div
 			className={cn(
-				"w-full flex flex-row mt-16 mb-40 flex-wrap gap-4 justify-center items-center",
+				"flex flex-wrap-reverse sm:flex-wrap mt-16 mb-40 gap-4 justify-center items-center",
 				className
 			)}>
-			<ControlGroup className="grid grid-cols-2 gap-3 justify-center items-center">
+			<ControlGroup className="grid grid-cols-2 justify-center items-center">
 				<ControlButton
 					href={data.current_link}
 					className="hover:bg-primary duration-300 col-span-2 text-buttonText hover:text-buttonTextHover">

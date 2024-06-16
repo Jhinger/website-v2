@@ -53,7 +53,7 @@ const AudioPlayer = ({
 		<div onClick={handleMusicPlaying} title={name}>
 			<ControlGroup
 				className={cn(
-					"relative w-[20rem] bg-group h-max p-0 overflow-hidden border-2 border-transparent",
+					"relative w-[21rem] bg-group h-max p-0 overflow-hidden border-2 border-transparent",
 					className,
 					isPlaying && "animate-crazyColors"
 				)}>
