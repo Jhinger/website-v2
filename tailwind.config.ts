@@ -10,6 +10,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      gradientColorStopPositions: {
+        51: '51%',
+      },
       fontSize: {
         xxs: "0.5rem",
         xxsPlus: "0.6rem",

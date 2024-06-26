@@ -71,7 +71,7 @@ const AudioPlayer = ({
 						/>
 					</div>
 				</div>
-				<div className="absolute w-full h-full bg-gradient-to-r from-black via-black"></div>
+				<div className="absolute w-full h-full bg-gradient-to-r from-black via-black via-51"></div>
 				<div className="p-6 absolute w-2/3 h-full flex flex-col justify-between items-start left-0 top-0 right-0 text-xxsPlus text-gray-300">
 					<div className="flex flex-col gap-1 items-start">
 						<span className="font-semibold">Last Listened to</span>
