@@ -1,5 +1,4 @@
 import { isProduction } from "@/utils/environment";
-import { unstable_noStore as noStore } from "next/cache";
 import { kv } from "@vercel/kv";
 import { data } from "@/data";
 import type { ObjectFromUnion } from "@/types";
@@ -7,12 +6,10 @@ import type { ObjectFromUnion } from "@/types";
 export type RelevantSpotifyData = ObjectFromUnion<keyof typeof data.spotify>;
 
 async function getSpotifyAccessToken(): Promise<string | null> {
-  noStore();
   return await kv.get("spotify_access_token");
 }
 
 async function getSpotifyRefreshToken(): Promise<string | null> {
-  noStore();
   return await kv.get("spotify_refresh_token");
 }
 
@@ -43,7 +40,6 @@ async function refreshTokens(): Promise<string | Error> {
         "Content-Type": "application/x-www-form-urlencoded",
         Authorization: `Basic ${Buffer.from(`${process.env.SPOTIFY_CLIENT_ID}:${process.env.SPOTIFY_CLIENT_SECRET}`).toString("base64")}`,
       },
-      cache: "no-store",
     });
 
     if (response.ok) {
@@ -79,9 +75,6 @@ async function getRecentlyPlayed(
       method: "GET",
       headers: {
         Authorization: `Bearer ${access_token}`,
-      },
-      next: {
-        revalidate: 300,
       },
     });
 

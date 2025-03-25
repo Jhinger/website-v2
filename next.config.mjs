@@ -8,16 +8,17 @@ const nextConfig = {
         headers: [
           {
             key: "Cache-Control",
-            value: "public, max-age=300, s-maxage=300, stale-while-revalidate=60",
-          }
+            value:
+              "public, max-age=300, s-maxage=300, stale-while-revalidate=60",
+          },
         ],
-      }
-    ]
+      },
+    ];
   },
   logging: {
     fetches: {
-        fullUrl: true
-    }
+      fullUrl: true,
+    },
   },
   images: {
     remotePatterns: [
@@ -34,8 +35,8 @@ const nextConfig = {
         hostname: "i.scdn.co",
       },
     ],
-    minimumCacheTTL: 3600
-  }
+    minimumCacheTTL: 3600,
+  },
 };
 
 export default nextConfig;

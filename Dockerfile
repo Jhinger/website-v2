@@ -1,5 +1,5 @@
 
-ARG NODE_VERSION=18.17.1
+ARG NODE_VERSION=20.13.1
 FROM node:${NODE_VERSION}-alpine AS base
 
 FROM base AS deps

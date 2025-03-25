@@ -19,7 +19,7 @@ const Experience = ({ className }: ExperienceProps) => {
 			{data.experience.map((experience, index) => (
 				<ControlGroup
 					className="w-[20rem] md:w-[23rem] lg:w-[25rem] h-[12rem] relative overflow-hidden cursor-pointer first:ring-2 first:ring-primary first:ring-offset-2 ring-offset-colorBackground"
-					key={experience.name}>
+					key={index}>
 					<Image
 						src={experience.image}
 						fill={true}
